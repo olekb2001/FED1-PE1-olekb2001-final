@@ -3,7 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    padding-top: 60px; 
+}
 .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +19,7 @@
     color: white;
     padding: 15px 25px;
 }
+
 .navbar .Logo-header{
     font-size: 40px;
     font-family: 'poppins', sans-serif;
@@ -36,14 +45,17 @@
     text-decoration: underline;
     font-family: 'Roboto', sans-serif;
 }
+.hamburger {
+    display: none; /* Hide hamburger on larger screens */
+}
 /* navbar finished  */
 /* login start */
 .login-header{
     font-family: 'poppins', sans-serif;
     font-size: 50px;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 footer{
     background-color: #1E2A38;
@@ -67,4 +79,164 @@ footer ul li a{
 footer ul li a i{
     margin: 0 10px;
     
+}
+/* login/register form */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+#register-form{
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Optional: Adjust width as needed */
+    border: 2px solid black; /* Add black border */
+    padding: 20px; /* Add padding inside the form */
+    border-radius: 5px; /* Optional: Add border radius */
+}
+.form-container label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.form-container input{
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.form-container button{
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    background-color: #009688;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-container button:hover{
+    background-color: #00796B;
+    
+}
+.form-container .have-acc{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#message-container {
+    display: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+/* login styls */
+#login-form{
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Optional: Adjust width as needed */
+    border: 2px solid black; /* Add black border */
+    padding: 20px; /* Add padding inside the form */
+    border-radius: 5px; /* Optional: Add border radius */
+    
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    #register-form, #login-form {
+        width: 50%; /* Increase width for tablets */
+    }
+}
+@media screen and (max-width: 858px) {
+    .navbar .nav-links{
+        display: none; /* Hide menu by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        background-color: #1E2A38;
+        text-align: center;
+        padding: 25px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .navbar .nav-links.active{
+        display: flex;
+    }
+    .navbar .nav-links li{
+        margin-bottom: 15px;
+    }
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+    }
+    
+
+
+}
+
+@media screen and (max-width: 768px) {
+    #register-form, #login-form {
+        width: 70%; /* Make it wider on smaller screens */
+    }
+    
+    
+
+}
+
+@media screen and (max-width: 480px) {
+    #register-form, #login-form {
+        width: 90%; /* Full width for small screens */
+    }
+
+    .login-header {
+        font-size: 25px;
+        margin-top: 10px; /* Reduce top margin */
+        margin-bottom: 10px; /* Reduce bottom margin */
+    }
+
+    .navbar .Logo-header {
+        font-size: 30px;
+    }
+
+    .form-container label {
+        font-size: 16px; /* Reduce label font size */
+    }
+
+    .form-container input, .form-container button {
+        font-size: 16px; /* Reduce input and button font size */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .form-container {
+        padding: 10px; /* Reduce container padding */
+    }
+    .form-container .have-acc{
+        font-size: 16px;
+    }
+    footer{
+        font-size: 12px;
+    }
+    footer ul li a{
+        font-size: 14px;
+    }
+
+
 }
