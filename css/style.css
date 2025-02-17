@@ -187,39 +187,29 @@ footer ul li a i{
         font-size: 30px;
         color: white;
     }
-    
-
-
 }
 
 @media screen and (max-width: 768px) {
     #register-form, #login-form {
         width: 70%; /* Make it wider on smaller screens */
     }
-    
-    
-
 }
 
 @media screen and (max-width: 480px) {
     #register-form, #login-form {
         width: 90%; /* Full width for small screens */
     }
-
     .login-header {
         font-size: 25px;
         margin-top: 10px; /* Reduce top margin */
         margin-bottom: 10px; /* Reduce bottom margin */
     }
-
     .navbar .Logo-header {
         font-size: 30px;
     }
-
     .form-container label {
         font-size: 16px; /* Reduce label font size */
     }
-
     .form-container input, .form-container button {
         font-size: 16px; /* Reduce input and button font size */
         padding: 10px; /* Reduce padding */
