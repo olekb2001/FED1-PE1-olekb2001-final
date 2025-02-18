@@ -115,10 +115,10 @@ footer ul li a i{
 #register-form{
     display: flex;
     flex-direction: column;
-    width: 30%; /* Optional: Adjust width as needed */
-    border: 2px solid black; /* Add black border */
-    padding: 20px; /* Add padding inside the form */
-    border-radius: 5px; /* Optional: Add border radius */
+    width: 30%; 
+    border: 2px solid black; 
+    padding: 20px; 
+    border-radius: 5px; 
 }
 .form-container label{
     font-family: 'Poppins', sans-serif;
@@ -167,14 +167,47 @@ footer ul li a i{
 #login-form{
     display: flex;
     flex-direction: column;
-    width: 30%; /* Optional: Adjust width as needed */
-    border: 2px solid black; /* Add black border */
-    padding: 20px; /* Add padding inside the form */
-    border-radius: 5px; /* Optional: Add border radius */
+    width: 30%; 
+    border: 2px solid black; 
+    padding: 20px; 
+    border-radius: 5px; 
 }
 /* blog feed  */
 .blog-feed{
     height: 100vh;
+}
+/* create new post start  */
+#create-post-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    border: 2px solid black; 
+    padding: 20px; 
+    border-radius: 5px; 
+    margin: 0 auto;
+}
+#create-post-form label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+#create-post-form input{
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#create-post-form textarea{
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    font-size: 20px;
+    resize: vertical;
+    max-height: 365px;
+    min-height: 150px;
 }
 
 
@@ -190,10 +223,10 @@ footer ul li a i{
 }
 @media screen and (max-width: 858px) {
     .navbar .nav-links{
-        display: none; /* Hide menu by default on smaller screens */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on navbar height */
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: #1E2A38;
@@ -208,7 +241,7 @@ footer ul li a i{
         margin-bottom: 15px;
     }
     .hamburger {
-        display: block; /* Show hamburger on smaller screens */
+        display: block; 
         cursor: pointer;
         font-size: 30px;
         color: white;
@@ -217,7 +250,7 @@ footer ul li a i{
 
 @media screen and (max-width: 768px) {
     #register-form, #login-form {
-        width: 70%; /* Make it wider on smaller screens */
+        width: 70%; 
     }
 }
 
@@ -234,15 +267,15 @@ footer ul li a i{
         font-size: 30px;
     }
     .form-container label {
-        font-size: 16px; /* Reduce label font size */
+        font-size: 16px; 
     }
     .form-container input, .form-container button {
-        font-size: 16px; /* Reduce input and button font size */
-        padding: 10px; /* Reduce padding */
+        font-size: 16px; 
+        padding: 10px; 
     }
 
     .form-container {
-        padding: 10px; /* Reduce container padding */
+        padding: 10px; 
     }
     .form-container .have-acc{
         font-size: 16px;
@@ -253,6 +286,4 @@ footer ul li a i{
     footer ul li a{
         font-size: 14px;
     }
-
-
 }
