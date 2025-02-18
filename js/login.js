@@ -6,20 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
         loginForm.addEventListener("submit", async function (event) {
             event.preventDefault(); // Prevent default form submission
 
-            // Get input values
+            // Get the users values
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
-            // Validation: Ensure email and password are provided
+            // check if values are empty
             if (!email || !password) {
                 displayMessage("error", "Please fill in all fields.");
                 return;
             }
-
-            // Construct request data
             const requestData = { email, password };
 
-            // API URL
             const apiUrl = "https://v2.api.noroff.dev/auth/login";
 
             try {
@@ -32,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const responseData = await response.json();
 
                 if (response.ok) {
-                    // Save user details & token to localStorage
+                    // Save user details & token to localStorage for later use
                     localStorage.setItem("token", responseData.data.accessToken);
                     localStorage.setItem("username", responseData.data.name);
                     localStorage.setItem("email", responseData.data.email);
@@ -51,8 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    // Function to display messages dynamically
+    // Function to display messages to the user and admin
     function displayMessage(type, text) {
         messageContainer.innerHTML = `<p class="${type}">${text}</p>`;
         messageContainer.style.display = "block";

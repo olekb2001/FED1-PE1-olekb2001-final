@@ -35,6 +35,8 @@ body{
     align-items: center;
     text-decoration: none;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .navbar .nav-links li{
     font-size: 20px;
@@ -45,6 +47,27 @@ body{
     text-decoration: underline;
     font-family: 'Roboto', sans-serif;
 }
+/* hidden navbar items*/
+#create-post-container, #logout-container {
+    display: none; /* Removes them completely */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hamburger {
     display: none; /* Hide hamburger on larger screens */
 }
@@ -148,7 +171,10 @@ footer ul li a i{
     border: 2px solid black; /* Add black border */
     padding: 20px; /* Add padding inside the form */
     border-radius: 5px; /* Optional: Add border radius */
-    
+}
+/* blog feed  */
+.blog-feed{
+    height: 100vh;
 }
 
 
@@ -156,7 +182,7 @@ footer ul li a i{
 
 
 
-
+/* media */
 @media screen and (max-width: 1024px) {
     #register-form, #login-form {
         width: 50%; /* Increase width for tablets */
