@@ -6,3 +6,4 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
 });
+//hamburger menu code
