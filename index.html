@@ -27,9 +27,27 @@
         </nav>
     </header>
         <main class="blog-feed">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Stay informed, Stay inspired</h1>
+                    <p></p>
+
+                </div>
+
+            </section>
+            <!-- 🔹 Carousel Section -->
             <section class="blog-feed-carousel">
-                
-                
+                <h2>Featured Posts</h2>
+                <div class="carousel-container">
+                    <button id="prevBtn">❮</button>
+                    <div class="carousel" id="carousel"></div>
+                    <button id="nextBtn">❯</button>
+                </div>
+            </section>
+        
+            <!-- 🔹 Blog Posts Grid -->
+            <section class="blog-feed-grid" id="blog-feed-grid">
+                <!-- Blog posts will be dynamically inserted here -->
             </section>
         </main>
         <footer>
@@ -41,5 +59,6 @@
         </footer>
         <script src="/js/navbar-loggedin-loggedout.js"></script>
         <script src="/js/navbar.js"></script>
+        <script src="/js/fetchApiPosts.js"></script>
 </body>
 </html>
