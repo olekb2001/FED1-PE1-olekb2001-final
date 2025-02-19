@@ -368,11 +368,16 @@ footer ul li a i{
 .blog-card h3 {
     font-size: 20px;
     margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .blog-card p {
     font-size: 14px;
     color: #555;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+
 }
 
 
@@ -431,6 +436,10 @@ footer ul li a i{
     #register-form, #login-form {
         width: 50%; /* Increase width for tablets */
     }
+    .blog-feed-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 @media screen and (max-width: 858px) {
     .navbar .nav-links{
@@ -470,6 +479,12 @@ footer ul li a i{
     }
     .blog-feed-carousel h2 {
         font-size: 34px;
+    }
+    .articles-header{
+        font-size: 34px;
+    }
+    .blog-feed-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -513,6 +528,9 @@ footer ul li a i{
         font-size: 18px;
     }
     .blog-feed-carousel h2 {
+        font-size: 30px;
+    }
+    .articles-header{
         font-size: 30px;
     }
     
