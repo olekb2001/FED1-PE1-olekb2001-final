@@ -79,22 +79,6 @@ body{
     font-weight: 400;
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hamburger {
     display: none; /* Hide hamburger on larger screens */
 }
@@ -331,11 +315,11 @@ footer ul li a i{
 /* grid */
 .blog-feed-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Space between grid items */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto; /* Center the grid */
+    margin: 0 auto; 
 }
 
 .blog-card {
@@ -423,27 +407,6 @@ footer ul li a i{
     margin-bottom: 20px;
     margin-top: 6rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .save-btn, .delete-btn {
     padding: 15px;
     margin: 15px 0;
@@ -470,8 +433,6 @@ footer ul li a i{
 .delete-btn:hover {
     background-color: #c9302c;
 }
-
-
 /* create new post start  */
 #create-post-form{
     display: flex;
@@ -545,24 +506,40 @@ footer ul li a i{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#post-actions {
-    text-align: center;
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 20px;
+    padding: 10px;
 }
 .edit-post-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 20px;
-    background-color: #009688;
-    color: white;
-    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
 }
 .edit-post-btn:hover {
-    background-color: #00796B;
+    background-color: #1e7e34;
+}
+/* share btn */
+.share-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.share-btn:hover {
+    background-color: #0056b3;
 }
 /* media */
 @media screen and (max-width: 1024px) {

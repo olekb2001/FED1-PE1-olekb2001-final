@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
             messageContainer.innerHTML = `<span style="color: red;">Error: You must be logged in to create a post.</span>`;
             return;
         }
-
         const postData = {
             title,
             body,
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.ok) {
                 messageContainer.innerHTML = `<span style="color: green;">Post created successfully! Redirecting...</span>`;
                 setTimeout(() => {
-                    window.location.href = "/index.html"; // Redirect to the Blog Feed after 2 seconds
+                    window.location.href = "/index.html"; // Redirect to the Blog Feed after 2 sec
                 }, 2000);
             } else {
                 messageContainer.innerHTML = `<span style="color: red;">Error: ${responseData.errors ? responseData.errors[0].message : "Something went wrong"}</span>`;

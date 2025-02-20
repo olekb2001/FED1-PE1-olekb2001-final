@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const deleteBtn = document.getElementById("delete-btn");
     const messageContainer = document.getElementById("message-container");
 
-    // Get post ID from URL
+    // Post id from url
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get("id");
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const username = "Ole_Kristian"; 
-    const token = localStorage.getItem("token"); // Ensure user is logged in
+    const token = localStorage.getItem("token"); // Ensure user is log in
     const apiUrl = `https://v2.api.noroff.dev/blog/posts/${username}/${postId}`;
 
     if (!token) {
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         return;
     }
 
-    // 🔹 Load post data
     async function loadPost() {
         try {
             const response = await fetch(apiUrl);
@@ -40,9 +39,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-    loadPost(); // Load the post when the page loads
+    loadPost(); 
 
-    // 🔹 Handle form submission (Update Post)
+    
     editForm.addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent page reload
 
@@ -79,7 +78,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     });
 
-    // 🔹 Handle delete post
     deleteBtn.addEventListener("click", async function () {
         if (!confirm("Are you sure you want to delete this post?")) return;
 
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             messageContainer.innerHTML = "<p style='color: green;'>Post deleted successfully!</p>";
 
             setTimeout(() => {
-                window.location.href = "/index.html"; // Redirect to homepage after deletion
+                window.location.href = "/index.html"; // Redirect to the Blog Feed
             }, 2000);
 
         } catch (error) {

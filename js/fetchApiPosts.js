@@ -11,8 +11,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.log("No posts available.");
             return;
         }
-
-        
         posts.sort((a, b) => new Date(b.created) - new Date(a.created));
 
         
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Error fetching posts:", error);
     }
 });
-
 
 function displayCarousel(posts) {
     const carousel = document.getElementById("carousel");
@@ -50,7 +47,6 @@ function displayCarousel(posts) {
     setupCarousel();
 }
 
-
 function displayGrid(posts) {
     const gridContainer = document.getElementById("blog-feed-grid");
     gridContainer.innerHTML = ""; 
@@ -69,7 +65,6 @@ function displayGrid(posts) {
         gridContainer.appendChild(postElement);
     });
 }
-
 
 function setupCarousel() {
     let index = 0;
@@ -95,5 +90,5 @@ function setupCarousel() {
     setInterval(() => {
         index = (index + 1) % items.length;
         showSlide(index);
-    }, 5000); // Auto-slide every 5 seconds
+    }, 5000); // Auto-slide every 5 sec
 }

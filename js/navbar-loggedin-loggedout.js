@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const token = localStorage.getItem("token"); 
 
     if (token) {
-        // Hide Registe & Login
+        
         if (registerContainer) registerContainer.style.display = "none";
         if (loginContainer) loginContainer.style.display = "none";
 
-        // Show Logout btn and Create Post etc
+        
         if (logoutContainer) logoutContainer.style.display = "block";
         if (createPostContainer) createPostContainer.style.display = "block";
     } else {
-        // Show Register & Login lings
+        
         if (registerContainer) registerContainer.style.display = "block";
         if (loginContainer) loginContainer.style.display = "block";
 
-        // Hide Logout & Create Post etc
+        
         if (logoutContainer) logoutContainer.style.display = "none";
         if (createPostContainer) createPostContainer.style.display = "none";
     }
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.removeItem("username");
             localStorage.removeItem("email");
 
-            window.location.href = "/account/login.html"; // get back to the login page
+            window.location.href = "/account/login.html"; 
         });
     }
 });

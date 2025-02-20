@@ -11,19 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
-            // check if username type is correct
+            // check if username type is ok
             if (!/^[a-zA-Z0-9_]+$/.test(name)) {
                 displayMessage("error", "Username can only contain letters, numbers, and underscores (_). Spaces are NOT allowed.");
                 return;
             }
 
-            // check if mail type is correct
+            // check if mail type is ok
             if (!/^[a-zA-Z0-9._%+-]+@stud\.noroff\.no$/.test(email)) {
                 displayMessage("error", "You must use a valid stud.noroff.no email address.");
                 return;
             }
 
-            // Check the lenght of the password
+            // Check the lenght 
             if (password.length < 8) {
                 displayMessage("error", "Password must be at least 8 characters long.");
                 return;
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const requestData = { name, email, password };
 
-            // API URL
+            
             const apiUrl = "https://v2.api.noroff.dev/auth/register";
 
             try {
