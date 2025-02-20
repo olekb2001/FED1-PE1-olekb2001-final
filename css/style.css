@@ -231,7 +231,6 @@ footer ul li a i{
     align-items: center;
     justify-content: center;
     position: relative;
-    
 }
 
 .carousel {
@@ -378,10 +377,99 @@ footer ul li a i{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
 }
+/* css for edit form */
+#edit-post-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    border: 2px solid black; 
+    padding: 20px; 
+    border-radius: 5px; 
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+#edit-post-form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+#edit-post-form input {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#edit-post-form textarea {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    font-size: 20px;
+    resize: vertical;
+    max-height: 250px;
+    min-height: 150px;
+}
+
+.edit-main h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 6rem;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.save-btn, .delete-btn {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #1E2A38;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #009688;
+}
+
+.save-btn:hover {
+    background-color: #00796B;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
 
 
 /* create new post start  */
@@ -484,6 +572,9 @@ footer ul li a i{
     .blog-feed-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    #edit-post-form {
+        width: 70%; 
+    }
 
 }
 @media screen and (max-width: 858px) {
@@ -544,6 +635,17 @@ footer ul li a i{
     .post p {
         font-size: 16px;
     }
+    #edit-post-form {
+        width: 85%; 
+    }
+    #edit-post-form label {
+        font-size: 18px; 
+    }
+
+    .save-btn, .delete-btn {
+        font-size: 18px; 
+        padding: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -601,6 +703,16 @@ footer ul li a i{
     }
     .post p {
         font-size: 14px;
+    }
+    #edit-post-form {
+        width: 90%; 
+    }
+    #edit-post-form label {
+        font-size: 16px;
+    }
+    .save-btn, .delete-btn {
+        font-size: 16px;
+        padding: 10px;
     }
     
 }
