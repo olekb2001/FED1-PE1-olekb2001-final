@@ -6,18 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
         registerForm.addEventListener("submit", async function (event) {
             event.preventDefault(); 
 
-            // Get input 
+            // Get the input 
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
-            // check if username type is ok
+            // check if username type is okay
             if (!/^[a-zA-Z0-9_]+$/.test(name)) {
                 displayMessage("error", "Username can only contain letters, numbers, and underscores (_). Spaces are NOT allowed.");
                 return;
             }
 
-            // check if mail type is ok
+            // check if mail type is okay
             if (!/^[a-zA-Z0-9._%+-]+@stud\.noroff\.no$/.test(email)) {
                 displayMessage("error", "You must use a valid stud.noroff.no email address.");
                 return;
@@ -30,8 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const requestData = { name, email, password };
-
-            
             const apiUrl = "https://v2.api.noroff.dev/auth/register";
 
             try {
@@ -40,9 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(requestData)
                 });
-
                 const responseData = await response.json();
-
                 if (response.ok) {
                     displayMessage("success", "Registration successful! Redirecting in 2 seconds...");
                     setTimeout(() => {

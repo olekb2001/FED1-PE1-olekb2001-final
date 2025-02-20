@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         const data = await response.json();
         const post = data.data;
 
-        
         postContainer.innerHTML = `
             <article class="post">
                 <h1>${post.title}</h1>
@@ -43,7 +42,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         postActions.appendChild(shareButton); 
 
-        
         const token = localStorage.getItem("token");
         const loggedInUser = localStorage.getItem("username"); 
 

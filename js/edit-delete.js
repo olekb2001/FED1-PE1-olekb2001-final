@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             messageContainer.innerHTML = "<p style='color: green;'>Post deleted successfully!</p>";
 
             setTimeout(() => {
-                window.location.href = "/index.html"; // Redirect to the Blog Feed home pag
+                window.location.href = "/index.html"; // Redirect to the Blog Feed home page
             }, 2000);
 
         } catch (error) {

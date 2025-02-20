@@ -33,3 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+// this code is change the navbar when users are log in or not 

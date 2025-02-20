@@ -6,3 +6,4 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
 });
+// code for the hamburger menu

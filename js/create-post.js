@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     createPostForm.addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent page reload
 
-        // Get  inpu
+        // Get  values
         const title = document.getElementById("title").value.trim();
         const body = document.getElementById("body").value.trim();
         const mediaUrl = document.getElementById("media-url").value.trim();
